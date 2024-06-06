@@ -1,0 +1,127 @@
+
+        /* Existing styles */
+        body {
+            background-color: grey
+        }
+        header { 
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        a.purple-link {
+            color: rgb(255, 255, 255);
+        }
+       .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+       .product-image {
+            width: 100%;
+            height: 300px;
+            background-color: #f2f2;
+            overflow: hidden;
+        }
+       .product-image2 {
+            width: 100%;
+            height: 900px;
+            background-color: #f2f2;
+            overflow: hidden;
+        }
+       .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+       .product-title {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+       .product-price {
+            margin-top: 5px;
+            font-size: 18px;
+            color: black;
+        }
+       .product-description {
+            margin-top: 20px;
+            font-size: 20px;
+            color: black;
+            margin-bottom: 50px;
+        }
+       .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+       .border {
+            border: solid black;
+            width: 95%;
+        }
+
+        /* New styles */
+        /* Add hover effect to products */
+       .product-grid.border:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Add fade-in animation to header and footer */
+        header, footer {
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Add scroll to top button */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        /* Add animations to products */
+       .product-grid.border {
+            animation: slide-in 0.5s ease-in-out;
+        }
+
+        @keyframes slide-in {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Add responsive design */
+        @media screen and (max-width: 768px) {
+           .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+           .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    

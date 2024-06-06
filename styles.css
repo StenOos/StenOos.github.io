@@ -1,0 +1,154 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: all 0.5s ease-in-out;
+        }
+        .product img {
+            width: 650px;
+            height: 350px;
+            border-radius: 0;
+            margin-bottom: 10px;
+            border: 5px solid darkgrey;
+        }
+        .product-info {
+            text-align: center;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+        .product-info.visible {
+            opacity: 1;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Add the CSS rule to change the color of the "Contact Us" link to purple. */
+        a.purple-link {
+            color: rgb(255, 255, 255);
+        }
+        /* Add the CSS rule for the search bar. */
+        .search-bar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transform: translateX(0);
+            box-sizing: border-box;
+        }
+        .search-bar input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #555;
+        }
+        .search-results {
+            margin-bottom: 20px;
+        }
+        .search-results li {
+            margin-bottom: 10px;
+        }
+        /* Add the CSS rule to make the search bar appear above the screen. */
+        .search-bar {
+            top: 0;
+            width: 100%;
+        }
+        /* Add the CSS rule to center the search bar. */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .full-width-image {
+    width: 99,5%;
+    margin-bottom: 20px;
+    margin-left: 0;
+    border: 5px solid darkgrey;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    border-color: darkgray;
+}
+.image-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(128, 128, 128, 0.301);
+    font-size: 24px;
+    text-align: center;
+
+}
+.image-text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: darkgrey;
+    font-size: 24px;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    height: 135%;
+    opacity: 0.701;
+    margin-top: 2015px;
+    font-style: italic;
+}
+.image-text1 h2 {
+   margin-top: 25%;
+   
+}
+
+

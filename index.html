@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webshop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            const searchForm = document.querySelector('#search-form');
+            const searchInput = document.querySelector('#search-input');
+            const searchButton = document.querySelector('#search-button');
+            const searchResults = document.querySelector('#search-results');
+            const products = document.querySelectorAll('.product');
+            searchButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                const searchQuery = searchInput.value.toLowerCase();
+                const filteredProducts = Array.from(products).filter(product => {
+                    const productTitle = product.querySelector('.product-info h1').textContent.toLowerCase();
+                    return productTitle.includes(searchQuery);
+                });
+                searchResults.innerHTML = '';
+                filteredProducts.forEach(product => {
+                    const productTitle = product.querySelector('.product-info h1').textContent;
+                    const listItem = document.createElement('li');
+                    listItem.textContent = productTitle;
+                    searchResults.appendChild(listItem);
+                });
+                if (searchQuery === 'silver ring') {
+                    const firstProduct = products[0];
+                    firstProduct.scrollIntoView({ behavior: 'smooth' });
+                } else if (searchQuery === 'gold ring') {
+                    const secondProduct = products[1];
+                    secondProduct.scrollIntoView({ behavior: 'smooth' });
+                } else if (searchQuery === 'black ring') {
+                    const thirdProduct = products[2];
+                    thirdProduct.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            products.forEach(product => {
+                product.addEventListener('mouseover', function() {
+                    this.querySelector('.product-info').classList.add('visible');
+                });
+                product.addEventListener('mouseout', function() {
+                    this.querySelector('.product-info').classList.remove('visible');
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Webshop</h1>
+    </header>
+    <main>
+        <section id="products">
+            <div class="product">
+                <a href="blackring.html"><img src="https://images.pexels.com/photos/17834/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600" alt="Silver Ring with a minimalistic design"></a>
+                <div class="product-info">
+                    <h1>Silver Ring</h1>
+                    <p>A clean ring with a minimalistic design</p>
+                    <p>Price: $100</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="product">
+               <a href="product2.html"> <img src="https://images.pexels.com/photos/1670723/pexels-photo-1670723.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gold Ring with a simple pattern"></a>
+                <div class="product-info">
+                    <h1>Gold Ring</h1>
+                    <p>A elegant ring with a simple pattern</p>
+                    <p>Price: $200</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://images.pexels.com/photos/168927/pexels-photo-168927.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Black Ring with a diamond and a ruff pattern">
+                <div class="product-info">
+                    <h1>Black Ring</h1>
+                    <p>A dark ring with a diamond and a ruff pattern</p>
+                    <p>Price: $300</p>
+                    <button>Buy Now</button>
+                </div> 
+            </div>
+        </section>
+        <section id="search-section">
+            <form id="search-form">
+                <div class="search-bar">
+                    <input type="search" id="search-input" placeholder="Search products">
+                    <button type="submit" id="search-button">Search</button>
+            </div> 
+            <div id="search-results"></div>
+         </form>
+         </section>
+         </main> 
+         <div class="full-width-image">
+            <img src="https://img.freepik.com/premium-photo/beautiful-wedding-ring-with-white-gold-large-blue-stone-tree-with-green-moss_563818-567.jpg" alt="image">
+            <div class="image-text1">
+                <h2>-a new beginning-</h2>
+                <a href="meer.html" class="purple-link">meer </a>
+            </div>
+        </div>
+
+         <footer> <p>Created by Tijn Oosterwaal for a school project.</p>
+             <a href="contacten.html" class="purple-link">Contact Us</a> 
+            </footer>
+         </body> 
+         </html>
